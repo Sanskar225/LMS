@@ -92,7 +92,7 @@ export const uploadSalarySlip = async (req: AuthRequest, res: Response): Promise
       return;
     }
 
-    profile.salarySlipUrl = `/uploads/${req.file.filename}`;
+    profile.salarySlipUrl = `${process.env.BASE_URL}/uploads/${req.file.filename}`;
     profile.salarySlipOriginalName = req.file.originalname;
     await profile.save();
 
