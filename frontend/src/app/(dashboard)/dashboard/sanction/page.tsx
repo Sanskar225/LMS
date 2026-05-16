@@ -217,7 +217,7 @@ export default function SanctionPage() {
                           <span>Salary: <strong>{formatCurrency(loan.borrowerProfile.monthlySalary)}/mo</strong></span>
                         </div>
                         {loan.borrowerProfile.salarySlipUrl && (
-                          <a href={`http://localhost:5000${loan.borrowerProfile.salarySlipUrl}`}
+                          <a href={loan.borrowerProfile.salarySlipUrl}
                             target="_blank" rel="noreferrer"
                             className="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-blue-100 text-blue-700 rounded-lg text-xs hover:bg-blue-200 transition-colors">
                             <FileText size={12} /> View Salary Slip
